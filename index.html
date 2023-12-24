@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+  <!--bootstrap 4 cdn CSS-->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- bootstrap link for icons -->
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <!-- font awesome icons link -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Raleway:wght@100&display=swap" rel="stylesheet">
+  <!-- importing fonts from google fonts -->
+
+  <link href="CSS/style.css" rel="stylesheet">
+
+    
+  
+	<title>pack-go holidays</title>
+
+
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md">
+  	<img src="images/PACKGO.png" id="logo"> <h4 id="brandname"> PACK-GO Holidays </h4> <!-- Logo and Brandname-->
+    <!--Toggler/Collapsible Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    	<span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Menu -->
+    
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+      	<li class="nav-item">
+            <a class="nav-link" href="#Home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#BookingSect">Book</a>
+          </li>
+          <li class="nav-item dropdown"> <!-- Dropdown menu -->
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Packages</a>
+            <div class="dropdown-menu">
+            	<a class="dropdown-item" href="#bookFrance">France</a>
+            	<a class="dropdown-item" href="#bookGermany">Germany</a>
+            	<a class="dropdown-item" href="#bookIndia">India</a>
+            	<a class="dropdown-item" href="#bookUSA">United States</a>
+              <a class="dropdown-item" href="#bookSingapore">Singapore</a>
+              <a class="dropdown-item" href="#bookIreland">Ireland</a>
+              <a class="dropdown-item" href="#bookUK">United Kingdom</a>
+              <a class="dropdown-item" href="#bookUAE">UAE</a>
+            </div>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#Services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#img_gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+      </ul>
+    </div>
+   
+
+    <div class="action-buttons">
+      <a href="#loginModal1" data-toggle="modal" class="btn btn-theme btn-primary text-white" id="Login-btn">Login</a>
+      <a href="#registerModal1" data-toggle="modal" class="btn btn-theme btn-success text-white" id="Register-btn">Register</a>
+    </div> 
+
+  </nav>
+
+  <!-- start of section1 -->
+
+  <div class="container mt-4" id="Home">
+    <div class="card image-card">
+      <img src="images/bk5.jpg" class="card-img-top" alt="Image Alt Text">
+      <div class="card-body text-center">
+        <h3> Welcome to PACK-GO Holidays </h3>
+        <h1> Visit <span id="changetext"> </span> </h1>
+        <p> Our Package Your Choice...      </p>
+        <a href="#BookingSect" class="btn btn-primary">Book Place</a>
+      </div>
+    </div>
+  </div>
+  <!-- end of section1 -->
+
+
+  <!-- Booking Section -->
+
+  <div class="container mt-4" id="BookingSect">
+    <h1 class="text-center"> Booking </h1>
+    <div class="row-section" id="bookingRow">
+      <div class="image-section text-center">
+        <img src="images/company.png" alt="Brand Image" id="brandImg">
+      </div>
+
+      <div class="form-section">
+        <form id="bookingForm" action="#" method="post">
+
+          <label for="whereTo">Where to:</label>
+          <select id="whereTo" name="whereTo">
+            <option value="Fra">France</option>
+            <option value="Ger">Germany</option>
+            <option value="Ind">India</option>
+            <option value="USA">United States</option>
+            <option value="Aus">Australia</option>
+          </select>
+
+          <label for="numberOfPersons">How Many Persons:</label>
+          <input type="number" id="numberOfPersons" name="numberOfPersons" min="1" required>
+
+          <label for="startDate">Start Date:</label>
+          <input type="date" id="startDate" name="startDate" required>
+
+          <label for="endDate">End Date:</label>
+          <input type="date" id="endDate" name="endDate" required>
+
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" rows="4" minlength="50" maxlength="500" required></textarea>
+
+          <button type="submit" class="btn-primary" onclick="bookNow()">Get Quote</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- End of Booking Section -->
+
+  <!-- Start of Package Gallery -->
+
+  <div class ="container" style="margin-top:50px" id="package">
+    <h1 class="text-center"> Package Gallery </h1>
+    <div class="row">   <!-- start of row1 -->
+
+      <div class="col-md-4">
+        <div class="card text-center"  id="bookFrance"> 
+          <img src="images/france.jpg">
+          <h3 class="t"> France </h3>
+          <p> Visit Eiffel Tower (Tour Eiffel), Louvre Museum (Musée du Louvre), Mont Saint-Michel, Versailles Palace (Château de Versailles), Côte d'Azur (French Riviera) etc.
+          </p>
+          <h5> $1000 </h5>
+          <div id="rate_star">
+            <i class="bi bi-star-fill"></i> <!-- filled star from bootstrap cdn -->
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i> <!-- half star -->
+          </div>
+          <p> 4.5 out of 5 </p>
+          <a href="#" class="btn btn-primary">Book Package</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-center"  id="bookGermany"> 
+          <img src="images/Germany.jpg">
+          <h3 class="t"> Germany </h3>
+          <p> Visit Brandenburg Gate (Brandenburger Tor), Neuschwanstein Castle, Cologne Cathedral (Kölner Dom), Berlin Wall, Black Forest (Schwarzwald), The Romantic Road etc.
+          </p>
+          <h5> $1200 </h5>
+          <div id="rate_star">
+            <i class="bi bi-star-fill"></i> <!-- filled star from bootstrap cdn -->
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i> <!-- half star -->
+          </div>
+          <p> 4 out of 5 </p>
+          <a href="#" class="btn btn-primary">Book Package</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-center"  id="bookIndia"> 
+          <img src="images/india.jpeg">
+          <h3 class="t"> India </h3>
+          <p> Visit Taj Mahal, Jaipur - The Pink City, Varanasi - Ghats and Temples, Kerala Backwaters, Goa Beaches, Delhi - Red Fort, India Gate, Qutub Minar etc.
+          </p>
+          <h5> $300 </h5>
+          <div id="rate_star">
+            <i class="bi bi-star-fill"></i> <!-- filled star from bootstrap cdn -->
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+          </div>
+          <p> 5 out of 5 </p>
+          <a href="#" class="btn btn-primary">Book Package</a>
+        </div>
+      </div>
+
+    </div> 
+    <!-- end of row1 -->
+
+    <br>
+    <div class="row">   <!-- start of row2 -->
+
+      <div class="col-md-4">
+        <div class="card text-center"  id="bookAustralia"> 
+          <img src="images/australia.jpg">
+          <h3 class="t"> Australia </h3>
+          <p> Pick up the spots of your choice and we can plan a package for you... </p>
+          <h5> $990 </h5>
+          <div id="rate_star">
+            <i class="bi bi-star-fill"></i> <!-- filled star from bootstrap cdn -->
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+          </div>
+          <p>5 out of 5 </p>
+          <a href="#" class="btn btn-primary">Book Package</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-center"  id="bookUSA"> 
+          <img src="images/USA.jpg">
+          <h3 class="t"> United States </h3>
+          <p> Pick up the spots of your choice and we can plan a package for you... </p>
+          <h5> $1800 </h5>
+          <div id="rate_star">
+            <i class="bi bi-star-fill"></i> <!-- filled star from bootstrap cdn -->
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i> <!-- half star -->
+          </div>
+          <p> 4.5 out of 5 </p>
+          <a href="#" class="btn btn-primary">Book Package</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-center"  id="bookUK"> 
+          <img src="images/UK.jpg">
+          <h3 class="t"> United Kingdom </h3>
+          <p> Pick up the spots of your choice and we can plan a package for you... </p>
+          <h5> $1300 </h5>
+          <div id="rate_star">
+            <i class="bi bi-star-fill"></i> <!-- filled star from bootstrap cdn -->
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i> <!-- half star -->
+          </div>
+          <p> 4.5 out of 5 </p>
+          <a href="#" class="btn btn-primary">Book Package</a>
+        </div>
+      </div>
+
+    </div> 
+    <!-- end of row2 -->
+
+    <br>
+    <div class="row">   <!-- start of row3 -->
+
+      <div class="col-md-4">
+        <div class="card text-center"  id="bookIreland"> 
+          <img src="images/Ireland.jpg">
+          <h3 class="t"> Ireland </h3>
+          <p> Pick up the spots of your choice and we can plan a package for you... </p>
+          <h5> $1500 </h5>
+          <div id="rate_star">
+            <i class="bi bi-star-fill"></i> <!-- filled star from bootstrap cdn -->
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+          </div>
+          <p> 4 out of 5 </p>
+          <a href="#" class="btn btn-primary">Book Package</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-center"  id="bookSingapore"> 
+          <img src="images/singapore.jpg">
+          <h3 class="t"> Singapore </h3>
+          <p> Pick up the spots of your choice and we can plan a package for you... </p>
+          <h5> $800 </h5>
+          <div id="rate_star">
+            <i class="bi bi-star-fill"></i> <!-- filled star from bootstrap cdn -->
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i> <!-- half star -->
+          </div>
+          <p> 4.5 out of 5 </p>
+          <a href="#" class="btn btn-primary">Book Package</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-center"  id="bookUAE"> 
+          <img src="images/UAE.jpeg">
+          <h3 class="t"> United Arab Emirates </h3>
+          <p> Pick up the spots of your choice and we can plan a package for you... </p>
+          <h5> $600 </h5>
+          <div id="rate_star">
+            <i class="bi bi-star-fill"></i> <!-- filled star from bootstrap cdn -->
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i> <!-- half star -->
+          </div>
+          <p> 4.5 out of 5 </p>
+          <a href="#" class="btn btn-primary">Book Package</a>
+        </div>
+      </div>
+
+    </div> 
+    <!-- end of row3 -->
+
+  </div>
+
+  <!-- End of Package Gallery -->
+
+  <br>
+
+  <!-- Start of Services -->
+  <h1 class="text-center"  id="Services"> Other Services <h1>
+  <div class="services-section">
+
+    <div class="service-card">    <!-- Service 1 -->
+        <div class="service-icon text-center">&#x1F3E8;</div> <!-- Hotel icon -->
+        <div class="service-details">
+            <h3 class="service-title">Affordable Hotel</h3>
+            <p class="service-description">Discover budget-friendly accommodation options for a comfortable stay.</p>
+        </div>
+    </div>
+
+    <div class="service-card">    <!-- Service 2 -->
+        <div class="service-icon text-center">&#x1F374;</div> <!-- Fork and knife icon -->
+        <div class="service-details">
+            <h3 class="service-title">Food & Drinks</h3>
+            <p class="service-description">Explore a variety of delicious cuisines and beverages during your trip.</p>
+        </div>
+    </div>
+
+    <div class="service-card">     <!-- Service 3 -->
+        <div class="service-icon text-center">&#x1F6E1;</div> <!-- Safety cone icon -->
+        <div class="service-details">
+            <h3 class="service-title">Safety Guide</h3>
+            <p class="service-description">Stay informed about safety measures and guidelines for a secure journey.</p>
+        </div>
+    </div>
+
+    <div class="service-card">    <!-- Service 4 -->
+        <div class="service-icon text-center">&#x2708;</div> <!-- Plane icon -->
+        <div class="service-details">
+            <h3 class="service-title">Flights</h3>
+            <p class="service-description">Book your flights with ease and enjoy a seamless travel experience.</p>
+        </div>
+    </div>
+
+    <div class="service-card">    <!-- Service 5 -->
+        <div class="service-icon text-center">&#x1F697;</div> <!-- Car icon -->
+        <div class="service-details">
+            <h3 class="service-title">Transfers and Vehicle Hire</h3>
+            <p class="service-description">Explore at your own pace by renting a vehicle tailored to your travel needs.</p>
+        </div>
+    </div>
+
+    <div class="service-card">    <!-- Service 6 -->
+        <div class="service-icon text-center">&#x1F4D6;</div> <!-- Guide book icon -->
+        <div class="service-details">
+            <h3 class="service-title">Travel Guide Assistance</h3>
+            <p class="service-description">Get expert assistance and valuable insights from our travel guides for a memorable journey.</p>
+        </div>
+    </div>
+
+  </div>
+
+
+  <!-- End of Services -->
+
+ 
+
+  <!-- Start of Images Gallery -->
+
+
+  <section class="gallery" id="img_gallery">
+
+    <h1 class="text-center"> Image Gallery </h1>
+
+    <div class="scroll-container">
+      <div class="gall_imgs">
+        <img src="images/australia.jpg" alt="Australia" class="rounded-circle">
+        <img src="images/Germany.jpg" alt="Germany" class="rounded-circle">
+        <img src="images/singapore.jpg" alt="Singapore" class="rounded-circle">
+        <img src="images/USA.jpg" alt="USA" class="rounded-circle">
+        <img src="images/UK.jpg" alt="UK" class="rounded-circle">
+      </div>
+    </div>
+
+  </section>
+
+  <!-- End of Images Gallery -->
+
+  <br>
+
+  <!-- Start of About Info -->
+
+  <div class="jumbotron jumbotron-fluid">
+    <section class="about" id="about">
+      
+      <div class="container text-center">
+
+        <h1> About Us </h1>
+
+        <div class="row" style="margin-top: 50px;">
+
+          <div class="col-md-6 py-3 py-md-0">
+            <div class="card text-center">
+              <img src="images/company.png" alt="brand image" id="abt_img">
+            </div>
+          </div>
+
+          <div class="col-md-6 py-3 py-md-0">
+            <h3>How we work?</h3>
+
+            <p>Pack-Go is part of an International Travel Network group, one of the travel agencies which has wide network. It started its journey in February 1996. It is Licensed & Bonded by the International Commission for Aviation Licence No: TA00541 and so all your holiday money is fully protected. You can reach us in the following countries through these contacts or by our email for any enquiries.
+            <br>Once you book a package through this site, our representatives will reach out to you and confirm your booking within 2 hours. We would love to make your holidays enjoyable...<br>
+            </p>
+
+            <ul class="cont_list">
+              <li>India: +91 88888 88888</li>
+              <li>USA: +10 1 718 222 2222</li>
+              <li>Germany: +49 1522 3433333</li>
+              <li>UK: +44 7911 123456</li>
+              <li>Australia: +61 2 3456 7890</li>
+              <li>Email: packgo@internationaltours.com</li>
+            </ul>
+            
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </div>
+   
+  <!-- End of About Info -->
+
+  <br>
+
+  <!-- Start of footer -->
+  <hr>
+
+  <footer class="text-center" id="footer">
+
+    <div class="social">
+      <i class="bi bi-twitter"></i>
+      <i class="bi bi-facebook"></i>
+      <i class="bi bi-instagram"></i>
+      <i class="bi bi-youtube"></i>
+      <i class="bi bi-pinterest"></i>
+    </div>
+    <br>
+    <div class="credits">
+      <p>Designed By <a href="#">Geothak</a></p>
+    </div>
+    <div class="copyright">
+      <p>Copyright &copy;Geothak. All rights reserved.</p>
+    </div>
+
+  </footer>
+
+  <!-- End of footer -->
+
+
+<!-- start of Login modal -->
+
+  <div id="loginModal1" class="modal-style-1  modal ">
+    <div class="modal-dialog modal-login">
+      <div class="modal-content">
+
+        <div class="modal-header p-0 mb-3 mt-3">        
+          <h4 class="modal-title">login</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+
+        <div class="modal-body">
+<!-- dont forget to add action and action method  -->
+          <form action="#" method="#">
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                <input type="email" class="form-control" name="email" placeholder="Enter email address" required="required">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                <input type="password" class="form-control" name="password" placeholder="Enter password" required="required" autocomplete="on">
+              </div>
+            </div>
+            <div class="row pl-1 pr-1">
+              <div class="col text-left">
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="item_checkbox" name="item_checkbox" value="option1">
+                  <span class="custom-control-label">&nbsp;Remember Me</span>
+                </label>
+              </div>
+              <div class="col text-right hint-text pt-0">
+                <a href="" class="text-danger">Forgot Password?</a>
+              </div>
+            </div>
+            <div class="form-group text-center">
+              <button type="submit" class="btn btn-primary btn-signin">login</button> 
+            </div>
+            <p class="hint-text mt-3">or login with</p>
+          <!-- social login area -->
+            <div class="social-login text-center">
+              <a class=" btn-facebook  text-uppercase" href="redirect/facebook"><i class="fab fa-facebook-f mr-2 ml-2"></i> </a>
+              <a class=" btn-google  text-uppercase" href="redirect/google"><i class="fab fa-google mr-2 ml-2"></i></a>
+              <a class=" btn-twitter  text-uppercase" href="redirect/twitter"><i class="fab fa-twitter mr-2 ml-2"></i></a>
+            </div>
+          </form>
+        </div>
+        <div class="text-center mb-3">Don't have an account? <a class="register" href="#registerModal1" data-dismiss="modal" data-toggle="modal">Register</a></div>
+      </div>
+    </div>
+  </div>  
+
+  <!-- register modal 1 -->
+  <div id="registerModal1" class="modal-style-1  modal ">
+    <div class="modal-dialog modal-login">
+      <div class="modal-content">
+        <div class="modal-header p-0 mb-3 mt-3">        
+          <h4 class="modal-title">Register</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+<!-- dont forget to add action and action method  -->
+          <form action="#" method="#">
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input type="text" class="form-control" name="name" placeholder="Enter your full name" required="required">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">Gender</span>
+                <select class="form-control" name="gender" placeholder="Enter your Gender" required="required">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">Date of Birth</span>
+                <input type="date" class="form-control" name="dob"  required="required">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                <input type="tel" class="form-control" name="phone" required="required" placeholder="Enter your phone number">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                <input type="email" class="form-control" name="email" placeholder="Enter email address" required="required">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                <input type="password" class="form-control" name="password" placeholder="Enter password" required="required" autocomplete="on">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-eye-slash"></i></span>
+                <input type="password" class="form-control" name="password_confirmation" placeholder="Retype password" required="required" autocomplete="on">
+              </div>
+            </div>
+            <div class="form-group text-center">
+              <button type="submit" class="btn btn-primary btn-signin">Register</button>
+              
+            </div>
+            <p class="hint-text mt-3">or register with</p>
+            <!-- social login area -->
+            <div class="social-login text-center">
+              <a class=" btn-facebook  text-uppercase" href="redirect/facebook"><i class="fab fa-facebook-f mr-2 ml-2"></i> </a>
+              <a class=" btn-google  text-uppercase" href="redirect/google"><i class="fab fa-google mr-2 ml-2"></i></a>
+              <a class=" btn-twitter  text-uppercase" href="redirect/twitter"><i class="fab fa-twitter mr-2 ml-2"></i></a>
+            </div>
+          </form>
+        </div>
+        <div class="text-center mb-3">Already have an account? <a class="login" href="#loginModal1" data-dismiss="modal" data-toggle="modal">Login</a></div>
+      </div>
+    </div>
+  </div> 
+
+<!-- end of Register modal -->
+
+  <!-- jQuery v3.4.1 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+  <!-- bootstrap js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+  <script src="main.js" defer></script>
+
+</body>
+</html>
